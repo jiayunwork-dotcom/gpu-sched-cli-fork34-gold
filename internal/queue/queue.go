@@ -34,7 +34,7 @@ func (q *PriorityQueue) Enqueue(task *model.Task) {
 		}
 	}
 	switch {
-	case effectivePriority > 8:
+	case effectivePriority >= 8:
 		q.high = append(q.high, task)
 	case effectivePriority >= 4:
 		q.med = append(q.med, task)
